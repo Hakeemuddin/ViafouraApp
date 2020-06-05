@@ -1,0 +1,51 @@
+<div class="card" style="width: 100%;">
+  <div class="card-body">
+    <div class="d-flex flex-row">
+      <div class="column1 profile-image">
+        <img [src]="comment?.profileImageUrl" alt="profile picture" />
+      </div>
+      <div class="column2">
+        <h5 class="card-title">
+          {{ comment?.name }}
+          <span class="badge badge-pill badge-dark ml-1">{{
+            comment?.designation
+          }}</span
+          ><span class="text-muted ml-1 time-stamp">
+            <i class="fa fa-circle dot-icon mx-1"></i
+            >{{ comment?.commentTimeStamp }}</span
+          >
+        </h5>
+        <p
+          class="card-text"
+          (mouseenter)="mouseEnter()"
+          (mouseleave)="mouseLeave()"
+        >
+          {{ comment?.commentText }}
+        </p>
+        <div class="d-flex flex-row flex-wrap">
+          <span class="link" (click)="onReplyClick()" [class.active]="isActive"
+            >REPLY</span
+          >
+          <span
+            class="ml-4 link"
+            (click)="onRepliesClick()"
+            [class.active]="isActive"
+            >{{ comment?.replies + " REPLIES" }}</span
+          >
+          <span
+            class="ml-4 link"
+            (click)="onLikesClick()"
+            [class.active]="isActive"
+            ><i class="fa fa-angle-up icon"></i> {{ comment?.likes }}</span
+          >
+          <span
+            class="ml-4 link"
+            (click)="onDislikesClick()"
+            [class.active]="isActive"
+            ><i class="fa fa-angle-down icon"></i> {{ comment?.dislikes }}</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

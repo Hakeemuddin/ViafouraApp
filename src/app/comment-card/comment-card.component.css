@@ -1,0 +1,49 @@
+.link {
+  color: lightgrey;
+}
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    color: #000 !important;
+    cursor: pointer;
+  }
+}
+
+.active {
+  color: #000 !important;
+}
+
+.time-stamp {
+  font-size: small;
+}
+
+div.profile-image {
+  display: block;
+  width: 50px !important;
+  height: 50px !important;
+  text-align: center;
+}
+div.profile-image > img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+}
+
+.column1 {
+  direction: column;
+  width: 10%;
+}
+
+.column2 {
+  direction: column;
+  width: 90%;
+  margin-left: 15px;
+}
+.icon {
+  font-size: 20px;
+}
+.dot-icon {
+  font-size: 4px;
+  vertical-align: middle;
+}
